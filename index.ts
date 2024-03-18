@@ -5,7 +5,7 @@ import { NodeServer } from "effect-http-node";
 import * as S from '@effect/schema/Schema';
 
 const api = pipe(
-    Api.make({ title: "Users API" }),
+    Api.make(),
     Api.addEndpoint(pipe(Api.get("info", "/info"), Api.setResponseBody(S.string))),
     // Api.addEndpoint(pipe(Api.get("optional", "/optional"), Api.setResponseBody(S.string))),
     process.env.SOME_FEATURE_FLAG ? Api.addEndpoint(pipe(Api.get("optional", "/optional"), Api.setResponseBody(S.string))) : e => e,
