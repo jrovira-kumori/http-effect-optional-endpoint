@@ -1,0 +1,26 @@
+{
+  "name": "http-effect-repro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "go": "node build/index.js",
+    "serve": "npm run build && npm run go"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@effect/platform": "^0.48.8",
+    "@effect/platform-node": "^0.45.10",
+    "@effect/schema": "^0.64.5",
+    "effect": "^2.4.7",
+    "effect-http": "^0.59.0",
+    "effect-http-node": "^0.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.28",
+    "typescript": "^5.4.2"
+  }
+}
